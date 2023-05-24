@@ -60,6 +60,7 @@ function App() {
     console.log("logout response", response);
     await fetchUserStatus();
   };
+  
   const openCheckout = () => renderPaperCheckoutLink({
     checkoutLinkUrl: "https://withpaper.com/checkout/d5969c08-7452-4b0c-a96e-1741833c2f8d",
     
