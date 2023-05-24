@@ -109,6 +109,10 @@ function App() {
     .request(options)
     .then(function (response) {
       console.log(response.data);
+      const openCheckout = () => renderPaperCheckoutLink({
+        checkoutLinkUrl: response.data.checkoutLinkIntentUrl,
+      });
+      openCheckout();
     })
     .catch(function (error) {
       console.error(error);
@@ -127,9 +131,7 @@ function App() {
   const [placement, setPlacement] = useState('right')
 
 
-    const openCheckout = () => renderPaperCheckoutLink({
-      checkoutLinkUrl: "https://withpaper.com/checkout/94bc669f-e023-4ef6-a115-2b1f551445e7",
-    });
+  
   
 
   return (
@@ -170,7 +172,7 @@ function App() {
               <Button colorScheme='blue' variant='solid'>
                 checkout
               </Button>
-                <Button className="color-blue" onClick={openCheckout}>Buy with Paper</Button>
+                {/* <Button className="color-blue" onClick={openCheckout}>Buy with Paper</Button> */}
               </DrawerBody>
             </DrawerContent>
           </Drawer>
