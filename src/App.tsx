@@ -23,7 +23,10 @@ import {
   DrawerCloseButton,
   Radio,
   RadioGroup,
+  Input,
+  Center
 } from "@chakra-ui/react";
+import { HamburgerIcon } from '@chakra-ui/icons'
 import { useDisclosure } from '@chakra-ui/react';
 // import { Radio, RadioGroup } from '@chakra-ui/react'
 import {
@@ -159,7 +162,7 @@ function App() {
           <><>
       
           <Button colorScheme='blue' onClick={onOpen}>
-            Open
+            <HamburgerIcon/>
           </Button>
           <Drawer onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay />
@@ -195,6 +198,25 @@ function App() {
             our EWS platform and get a feel for how it can benefit your own
             project
           </Text>
+          
+          <form onSubmit={handleSubmit}>
+
+                <Center>
+                  <Input 
+                    width="60%"
+                    type="email"
+                    id="email"
+                    value={_email}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                    required
+                  />
+                  <Box m={2}>
+                    <Button type="submit">Submit</Button>
+                  </Box>
+                  
+                </Center>
+          </form>
         </Stack>
       </Box>
       <Stack spacing={10} >
@@ -209,19 +231,6 @@ function App() {
                   : undefined
               }
             />
-
-            <form onSubmit={handleSubmit}>
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={_email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <button type="submit">Submit</button>
-                </form>
           </Stack>
           </SimpleGrid>
           </>
