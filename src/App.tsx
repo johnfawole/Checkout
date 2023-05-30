@@ -98,7 +98,7 @@ function App() {
 
       const options = {
         method: 'POST',
-        url: 'https://verifyemailforpaper-production.up.railway.app/api/verifyEmail/',
+        url: 'http://localhost:5000/api/verifyEmail',
         headers: {
           accept: 'application/json',
           'content-type': 'application/json',
