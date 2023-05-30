@@ -111,14 +111,14 @@ function App() {
     axios
     .request(options)
     .then(function (response) {
-      // console.log(response.data);
+      console.log(response.data);
       const openCheckout = () => renderPaperCheckoutLink({
         checkoutLinkUrl: response.data.checkoutLinkIntentUrl,
       });
       openCheckout();
     })
     .catch(function (error) {
-      // console.error(error);
+      console.error(error);
       alert("An error occured, try again")
     })
 
