@@ -100,9 +100,9 @@ function App() {
         method: 'POST',
         url: 'https://verifyemailforpaper-production.up.railway.app/api/verifyEmail/',
         headers: {
-          accept: 'application/json',
-          'content-type': 'application/json',
-          Authorization: 'Bearer f38fd6a4-8ff0-47c2-a40c-e94e39fb80c7'
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer f38fd6a4-8ff0-47c2-a40c-e94e39fb80c7'
         },
         data: {
           _email
