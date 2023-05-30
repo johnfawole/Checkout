@@ -98,7 +98,7 @@ function App() {
 
       const options = {
         method: 'POST',
-        url: 'https://verify-email-for-paper.vercel.app/api/verifyEmail',
+        url: 'https://verify-email-for-paper.vercel.app/api/verifyEmail/',
         headers: {
           accept: 'application/json',
           'content-type': 'application/json',
