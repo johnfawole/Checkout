@@ -61,7 +61,7 @@ function App() {
     }
 
     const paperUser = await paper.getUser();
-    console.log("paperUser", paperUser);
+    // console.log("paperUser", paperUser);
 
     setUserDetails(paperUser);
   }, [paper]);
@@ -74,7 +74,7 @@ function App() {
 
   const logout = async () => {
     const response = await paper?.auth.logout();
-    console.log("logout response", response);
+    // console.log("logout response", response);
     await fetchUserStatus();
   };
   
@@ -94,7 +94,7 @@ function App() {
   //   console.log(domain);
 
     // if (domain.endsWith('edu.com')) {
-      console.log('Email domain is a valid .edu domain. Sending request...');
+      // console.log('Email domain is a valid .edu domain. Sending request...');
 
       const options = {
         method: 'POST',
@@ -111,14 +111,15 @@ function App() {
     axios
     .request(options)
     .then(function (response) {
-      console.log(response.data);
+      // console.log(response.data);
       const openCheckout = () => renderPaperCheckoutLink({
         checkoutLinkUrl: response.data.checkoutLinkIntentUrl,
       });
       openCheckout();
     })
     .catch(function (error) {
-      console.error(error);
+      // console.error(error);
+      alert("An error occured, try again")
     })
 
     // } else {
